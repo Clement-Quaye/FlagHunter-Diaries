@@ -1,3 +1,4 @@
+
 # FlagHunter-Diaries: Masterschool Cybersecurity CTF Portfolio
 
 **Dive into my cybersecurity journey with the `FlagHunter-Diaries`. This repository showcases my hands-on experience and achievements from the Level Four Room challenges on TryHackMe by Masterschool. From Linux basics to Nmap scan reporting, witness my exploration and conquests in the captivating world of Capture The Flag challenges. Join me on this adventure and discover the flags I've captured!**
@@ -41,12 +42,18 @@ This challenge focuses on demonstrating basic Linux command line operations, sim
 - **Commands Used**: 
   ```bash
   sudo adduser user1
+- *Screenshot*:
+   
+   ![UserCreation](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/37b29e41-58e5-4ac3-a758-78da2f2d7778)
 
 ##### ii. User Switch
 - **Objective**: Switch the session to the newly created user using command-line authentication
 - **Commands Used**: 
   ```bash
   su user1
+- *Screenshot*:
+  
+   ![SwitchUser](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/04ecbed8-798c-488a-aa3c-d70a6df128d0)
 
 ##### iii. Folder and File Creation
 - **Objective**: Create a new directory and a file within it. Write a simple message in the file.
@@ -54,9 +61,15 @@ This challenge focuses on demonstrating basic Linux command line operations, sim
   ```bash
   mkdir folder1
   echo "Hello from user1!" > folder1/file1
+- *Screenshot*:
+  
+   ![Folder-File_Creation](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/ad19b49d-fa57-4173-aee8-1a746e71f380)
+
 
 ##### iv. Switch Back to Original User
 - **Objective**: Switch back to original user session ('ctf').
 - **Commands Used**: 
   ```bash
   exit
+- *Screenshot*:
+  ![SwitchBack](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/c395e1a8-0625-4164-9dba-e05ee9383fd0)
