@@ -60,6 +60,3 @@ This challenge focuses on demonstrating basic Linux command line operations, sim
 - **Commands Used**: 
   ```bash
   exit
-  
-
-
