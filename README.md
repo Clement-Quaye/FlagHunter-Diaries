@@ -14,20 +14,52 @@ Feel free to delve into each section, and I hope you find it as enlightening as 
 
 ### CTF Challenges Overview:
 
-1. **Linux Basics: User and File Management** 🐧
-   - Dive deep into the Linux environment, understanding user roles, permissions, and mastering file management techniques.
-   
-2. **File System Flags** 📂
-   - Explore various file systems, uncovering hidden flags and understanding their significance in cybersecurity.
-   
-3. **Webpage Flags** 🕸️
-   - Navigate through web pages, identifying vulnerabilities and capturing flags embedded within the site's structure.
-   
-4. **Hidden Flags Challenge** 🕵️
-   - Put on your detective hat and hunt for flags concealed in unexpected places, testing your observation and deduction skills.
-   
-5. **Hash Cracking** 🔓
-   - Decrypt complex hashes, understanding the algorithms behind them, and the importance of secure hashing in data protection.
-   
-6. **Nmap Scan Report** 🌐
-   - Conduct comprehensive network scans using Nmap, generating detailed reports and understanding the network's security posture.
+1. [Linux Basics: User and File Management 🐧](#linux-basics-user-and-file-management)  
+2. [File System Flags 📂](#file-system-flags)  
+3. [Webpage Flags 🕸️](#webpage-flags)
+4. [Hidden Flags Challenge 🕵️](#hidden-flags-challenge)
+5. [Hash Cracking 🔓](#hash-cracking)
+6. [Nmap Scan Report 🌐](#nmap-scan-report)
+
+## Tools/OS/Methodology
+1. **VMWare Workstation 17 Player**
+2. **Kali-Linux**
+3. ```bash
+   ssh [user]@IP_Address
+
+### *flag#1: {h4ck3r5_r_us}*
+
+## Linux Basics-User and File Management
+
+#### Overview
+This challenge focuses on demonstrating basic Linux command line operations, simulating tasks commonly performed by cybersecurity professionals in system administration or security assessment.
+
+#### Task Details
+
+##### i. User Creation
+- **Objective**: Create a new user in the Linux system and assign a password for subsequent login.
+- **Commands Used**: 
+  ```bash
+  sudo adduser user1
+
+##### ii. User Switch
+- **Objective**: Switch the session to the newly created user using command-line authentication
+- **Commands Used**: 
+  ```bash
+  su user1
+
+##### iii. Folder and File Creation
+- **Objective**: Create a new directory and a file within it. Write a simple message in the file.
+- **Commands Used**: 
+  ```bash
+  mkdir folder1
+  echo "Hello from user1!" > folder1/file1
+
+##### iv. Switch Back to Original User
+- **Objective**: Switch back to original user session ('ctf').
+- **Commands Used**: 
+  ```bash
+  exit
+  
+
+
