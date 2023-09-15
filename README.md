@@ -72,4 +72,5 @@ This challenge focuses on demonstrating basic Linux command line operations, sim
   ```bash
   exit
 - *Screenshot*:
+  
   ![SwitchBack](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/c395e1a8-0625-4164-9dba-e05ee9383fd0)
