@@ -74,3 +74,29 @@ This challenge focuses on demonstrating basic Linux command line operations, sim
 - *Screenshot*:
   
   ![SwitchBack](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/c395e1a8-0625-4164-9dba-e05ee9383fd0)
+
+
+## File System Flags 📂
+
+#### Overview
+In this challenge, the objective is to navigate through a complex file system and locate hidden flags. The ability to find these flags showcases proficiency in navigating and manipulating the Linux file systems, a vital skill in the realm of cybersecurity.
+
+#### Flags Structure
+All flags in this CTF follow the structure: `{T415_15_a_te5t}`. 
+
+#### Task Details
+- **Objective**: Find 4 system flags.
+  
+##### i. Finding Flag#1 `find_flag.txt`
+
+- **Commands Used**: 
+  ```bash
+  find / -name find_flag.txt 2>/dev/null
+  cat path/to/find_flag.txt
+- *Comments: I used the standard error data stream (stderr==2) to redirect/discard all error messages [due to priviledge limitations] to the /dev/null special file*
+   
+- *Screenshot*:
+
+   ![Flag_1](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/514f216d-0d7d-4927-a4c0-6be407083b0a)
+
+  - *Flag_1*: {F1nd_Fl4g_Fun}
