@@ -76,7 +76,7 @@ This challenge focuses on demonstrating basic Linux command line operations, sim
   ![SwitchBack](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/c395e1a8-0625-4164-9dba-e05ee9383fd0)
 
 
-## File System Flags
+## File System Flags 📂
 
 #### Overview
 In this challenge, the objective is to navigate through a complex file system and locate hidden flags. The ability to find these flags showcases proficiency in navigating and manipulating the Linux file systems, a vital skill in the realm of cybersecurity.
@@ -144,7 +144,7 @@ All flags in this CTF follow the structure: `{T415_15_a_te5t}`.
   ##### d. *Flag_4*: {H1d3_1n_pl41n_s1gh7} -- *[directory: /home/ctf/.f.txt] -hidden file*
 
 
-### Webpage Flags
+## Webpage Flags 🕸️
 
 #### Overview
 In this challenge, the objective is to uncover flags concealed within webpages. These flags can be tucked away in various places, such as HTML comments or hidden pages. Successfully locating these flags highlights proficiency in web application security and a deep understanding of data handling on the web.
