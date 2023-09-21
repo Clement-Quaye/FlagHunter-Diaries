@@ -76,7 +76,7 @@ This challenge focuses on demonstrating basic Linux command line operations, sim
   ![SwitchBack](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/c395e1a8-0625-4164-9dba-e05ee9383fd0)
 
 
-## File System Flags 📂
+## File System Flags
 
 #### Overview
 In this challenge, the objective is to navigate through a complex file system and locate hidden flags. The ability to find these flags showcases proficiency in navigating and manipulating the Linux file systems, a vital skill in the realm of cybersecurity.
@@ -87,7 +87,7 @@ All flags in this CTF follow the structure: `{T415_15_a_te5t}`.
 #### Task Details
 - **Objective**: Find 4 system flags.
   
-##### i. Finding Flag#1 `find_flag.txt`
+### i. Finding Flag#1 `find_flag.txt`
 
 - **Commands Used**: 
   ```bash
@@ -100,3 +100,46 @@ All flags in this CTF follow the structure: `{T415_15_a_te5t}`.
    ![Flag_1](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/514f216d-0d7d-4927-a4c0-6be407083b0a)
 
   - *Flag_1*: {F1nd_Fl4g_Fun}
+    
+### ii. Finding Flag#2 `find_flag.txt` 
+
+### A - FIRST ATTEMPT (Find /)
+- **Initial Commands Used**: 
+  ```bash
+  find / -name "*.txt" 2>/dev/null -exec grep -H "{*}" {} \;
+  #Command Breakdown:
+  : <<'END_COMMENT' #using the here document ('<<') as a workaround for multi-line comments
+  1. find / -name "*.txt" 2>/dev/null --> this block runs a search for txt files using the * wildcard
+  2. -exec --> This option/command lets me execute another command on each file that matches the find conditions (no. 1)
+  3. grep --> tool for searching specific patterns within files
+  4. -H --> option/switch tells 'grep' to print the name of the file along with the matching line
+  5. "{*}" --> this argument represents the search pattern [not to be confused with the next one which is a placeholder]
+  6. {} --> a placeholder that 'find' uses to hold the current file being processed. When 'grep' is executed {} will be replaced with the current ".txt" file
+  7. \; --> end of the --exec command ('\' is an escape sequence for the semicolon)
+  END_COMMENT
+  
+- *Screenshot*:
+
+  ![Flag_2-first_attempt_1](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/0a3d919e-fe27-411d-882a-804cbe70cc87)
+
+  ![Flag_2-first_attempt_2](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/98ede3cb-e252-4fe3-8ed5-90a630e0039e)
+  
+- *Comments: The output of this command, although successful, is not an optimal (time-efficient) solution to finding the File System Flags*
+
+  ### B - SECOND ATTEMPT (Find /home)
+- **Initial Commands Used**: 
+  ```bash
+  find /home -name "*.txt" 2>/dev/null -exec grep -H "{*}" {} \;
+
+*Screenshot*:
+
+   ![Flag_2-4](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/2bee3715-899c-48a9-8658-fe977f5d0ca9)
+
+- *Comments: The output of this command gave me all three (3) remaining File System Flags (within the /home directory)*
+
+### File System FlagsList - ALL FOUR FLAGS
+  #### a. *Flag_1*: {F1nd_Fl4g_Fun} -- *[directory: /var/backups/find_flag.txt]*
+  #### b. *Flag_2*: {St0ry_Fl4g} -- *[directory: /home/ctf/flag/story.txt]*
+  #### c. *Flag_3*: {F1nd_Fl4g_Fun} -- *[directory: /home/ctf/flag/6/m/a/s/t/e/r/s/c/h/o/o/l/f_l_a_g.txt]*
+  #### d. *Flag_4*: {F1nd_Fl4g_Fun} -- *[directory: /home/ctf/.f.txt] -hidden file*
+
