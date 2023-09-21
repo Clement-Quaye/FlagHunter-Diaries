@@ -143,3 +143,35 @@ All flags in this CTF follow the structure: `{T415_15_a_te5t}`.
   #### c. *Flag_3*: {Y0u_G0T_1t} -- *[directory: /home/ctf/flag/6/m/a/s/t/e/r/s/c/h/o/o/l/f_l_a_g.txt]*
   #### d. *Flag_4*: {H1d3_1n_pl41n_s1gh7} -- *[directory: /home/ctf/.f.txt] -hidden file*
 
+
+### Webpage Flags 🕸️
+
+#### Overview
+In this challenge, the objective is to uncover flags concealed within webpages. These flags can be tucked away in various places, such as HTML comments or hidden pages. Successfully locating these flags highlights proficiency in web application security and a deep understanding of data handling on the web.
+
+#### Task Details
+
+#### i. Flag from HTML Pages and Comments (/var/www)
+- **Objective**: Search the source code of webpages to find flags hidden within HTML comments.
+- **Method Used**: 
+  ```bash
+  find /var/www/html -name "*.html" 2> /dev/null -exec grep -H {*} {} \;
+
+- *Screenshot*:
+  
+  ![Preliminary_attempt](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/b0f5c103-5476-4ce2-b99c-8361dce53f74)
+
+- *Comments: Although the output of this command is also not an optimal (time-efficient) solution to finding the Webpage Flags; it does serve as a good cue on which directory and HTML pages to Inspect*
+
+### Flags in Index (nano /var/www/html/index.html)
+
+![Index html-Flag1](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/ec16d417-6fb4-4b1f-bd72-34ba7392ceb8)
+
+#### a. *Flag_1*: {Another_Web_Flag} 
+
+![Index html-Flag2](https://github.com/Clement-Quaye/FlagHunter-Diaries/assets/67621550/52dab1a8-8125-416b-ab89-0270365b6c2e)
+
+#### b. *Flag_2*: {STUDENT_CTF_Web} 
+
+
+
