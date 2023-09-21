@@ -140,6 +140,6 @@ All flags in this CTF follow the structure: `{T415_15_a_te5t}`.
 ### File System FlagsList - ALL FOUR FLAGS
   #### a. *Flag_1*: {F1nd_Fl4g_Fun} -- *[directory: /var/backups/find_flag.txt]*
   #### b. *Flag_2*: {St0ry_Fl4g} -- *[directory: /home/ctf/flag/story.txt]*
-  #### c. *Flag_3*: {F1nd_Fl4g_Fun} -- *[directory: /home/ctf/flag/6/m/a/s/t/e/r/s/c/h/o/o/l/f_l_a_g.txt]*
-  #### d. *Flag_4*: {F1nd_Fl4g_Fun} -- *[directory: /home/ctf/.f.txt] -hidden file*
+  #### c. *Flag_3*: {Y0u_G0T_1t} -- *[directory: /home/ctf/flag/6/m/a/s/t/e/r/s/c/h/o/o/l/f_l_a_g.txt]*
+  #### d. *Flag_4*: {H1d3_1n_pl41n_s1gh7} -- *[directory: /home/ctf/.f.txt] -hidden file*
 
